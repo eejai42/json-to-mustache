@@ -10,11 +10,12 @@ function runApp(args) {
     program
       .option("-j, --json <json>", "input JSON file")
       .option("-t, --template <template>", "input JTM template file")
+      .option("-n, --root-node <rootNode>", "Name of root node")
       .option("-h, --help", " Show the usage/help documentation.")
       .action((action) => {
         program.json = action.json;
         program.template = action.template;
-        program.rootNode = action.first additional paramter <-- not sure how to do this
+        program.rootNode = action.rootNode
       })
       .parse(args);
 
@@ -24,7 +25,7 @@ function runApp(args) {
       );
       console.error("");
       console.error(
-        "Usage: json-to-markdown --json <json> --template <template> [options]"
+        "Usage: json-to-mustache --json <json> --template <template> [options]"
       );
       console.error("");
       console.error("");

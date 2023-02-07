@@ -1,5 +1,5 @@
 {
-    "name": "json-to-markdown",
+    "name": "json-to-mustache",
     "version": "1.0.0",
     "description": "NodejsConsoleApp1",
     "main": "app.js",
@@ -12,7 +12,7 @@
         "mustache": "^4.2.0"
     },
     "bin": {
-        "json-to-markdown": "app.js"
+        "json-to-mustache": "app.js"
     },
     "scripts": {
         "test": "mocha ./tests/tests.js"
