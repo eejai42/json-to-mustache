@@ -1,0 +1,47 @@
+﻿Game: {
+  Name: "Rock, Paper, Scissors",
+  HandShapes: [
+    {
+      ShapeName: "Rock",
+      Code: "X",
+      ResponseCode: "A",
+      Points: 1
+    },
+    {
+      ShapeName: "Paper",
+      Code: "Y",
+      ResponseCode: "B",
+      Points: 2
+    },
+    {
+      ShapeName: "Scissors",
+      Code: "Z",
+      ResponseCode: "C",
+      Points: 3
+    }
+  ],
+  PossibleResults: {
+    ChoiceWins: 6,
+    ChoiceLoses: 0,
+    EndsInADraw: 3
+  },
+  ExampleGames: [
+    {
+      Name: "Example 1",
+      ExampleRounds: [
+        {
+          Code: "Y",
+          Response: "A"
+        },
+        {
+          Code: "X",
+          Response: "B"
+        },
+        {
+          Code: "Z",
+          Response: "C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Game>
+  <Name>Rock, Paper, Scissors</Name>
+  <HandShapes>
+    <ShapeName>Rock</ShapeName>
+    <Code>X</Code>
+    <ResponseCode>A</ResponseCode>
+    <Points>1</Points>
+  </HandShapes>
+  <HandShapes>
+    <ShapeName>Paper</ShapeName>
+    <Code>Y</Code>
+    <ResponseCode>B</ResponseCode>
+    <Points>2</Points>
+  </HandShapes>
+  <HandShapes>
+    <ShapeName>Scissors</ShapeName>
+    <Code>Z</Code>
+    <ResponseCode>C</ResponseCode>
+    <Points>3</Points>
+  </HandShapes>
+  <PossibleResults>
+    <ChoiceWins>6</ChoiceWins>
+    <ChoiceLoses>0</ChoiceLoses>
+    <EndsInADraw>3</EndsInADraw>
+  </PossibleResults>
+  <ExampleGames>
+    <Name>Example 1</Name>
+    <ExampleRounds>
+      <Code>Y</Code>
+      <Response>A</Response>
+    </ExampleRounds>
+    <ExampleRounds>
+      <Code>X</Code>
+      <Response>B</Response>
+    </ExampleRounds>
+    <ExampleRounds>
+      <Code>Z</Code>
+      <Response>C</Response>
+    </ExampleRounds>
+  </ExampleGames>
+</Game>
