@@ -1,0 +1,30 @@
+{
+    "executionRoleArn": "arn:aws:iam::889457909864:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "chatgpt-proxy-server",
+            "image": "889457909864.dkr.ecr.us-east-2.amazonaws.com/chatgpt-proxy-server:latest",
+            "memoryReservation": 256,
+            "portMappings": [
+                {
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "containerPort": 3000
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "chatgpt-proxy-server",
+                    "awslogs-region": "us-east-2",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "command": [
+                "npm",
+                "start"
+            ]
+        }
+    ],
+    "family": "chatgpt-proxy-server-task-definition"
+}

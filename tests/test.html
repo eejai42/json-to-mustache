@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function sendMessage() {
+        const prompt = $('#prompt').val();
+        const conversationId = $('#conversationId').val();
+        const parentMessageId = $('#parentMessageId').val();
+        const postData = JSON.stringify({ prompt, conversationId, parentMessageId });
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/chatgpt',
+            data: postData,
+            contentType: 'application/json',
+            success: (response) => {
+            console.log(response);
+            $('#response').text(response.text);        
+            $('#postData').text(postData);
+            $('#response2').text(JSON.stringify(response, 2));
+            $('#conversationId').val(response.conversationId);
+            $('#parentMessageId').val(response.parentMessageId);
+            }
+        });
+        }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="prompt">
+    <input type="text" id="conversationId">
+    <input type="text" id="parentMessageId">
+    <button onclick="sendMessage()">Send Message</button>
+    <div id="response"></div>
+    <div id="postData" style="padding: 1em;"></div>
+    <div id="response2" style="padding: 1em;"></div>
+  </body>
+</html>
